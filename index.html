@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/TC.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Business Technologist</p>
+            <h2>Hi, I'm <span>Tas</span> from<br>Brooklyn, New York</h2>
+        </div>
+    </div>
+</div>
+<!-- --------------about--------------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/headshotimageonly.png">
+            </div>      
+                
+            <div class="about-col-2">
+                <h2>About Me</h2>
+                <h2 class="sub-title">I am a multifaceted business consultant with a diverse background with over fifteen years of operational management, event coordination, and supervisory roles. My journey includes pivotal positions such as Director of Operations for small businesses, where I provide structural setup, strategic guidance, optimize operations, and foster growth strategies using data-driven insights and current technologies. 
+                <br>
+                <br>
+                As the founder and operator of Indigo Natural Products, I am deeply committed to sustainability, emphasizing eco-friendly practices while providing resources to consumers on health-conscious choices. 
+                <br>
+                <br>
+                Additionally, I am currently expanding my skill set into software engineering, holding certifications as an AWS Cloud Practitioner and demonstrating proficiency in JavaScript, HTML, CSS, and React. My blend of hands-on experience in business consulting, entrepreneurship, and ongoing education in technology positions me as a versatile asset, poised to drive innovation and success in diverse environments.  Let my diverse expertise and passion for sustainable growth propel your organization forward.</h2>
+        
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+                <ul>
+                    <li><span>Project Management</span><br>Type Description</li>
+                    <li><span>Event Management</span><br>Type Description</li>
+                    <li><span>Data Visualization</span><br>Type Description</li>
+                    <li><span>Full Stack Development</span><br>Type Description</li>
+                    <li><span>NYS Public Notary </span><br>Type Description</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+                <ul>
+                    <li><span>2018 - 2019</span><br>Lead Group Teacher at Friends of Grown Heights</li>
+                    <li><span>2017 - 2018</span><br>Substitute Teacher at The Department of Education</li>
+                    <li><span>2015 - 2017</span><br>Operations Manager at Technology Solutions</li>
+                    <li><span>2014 - 2015</span><br>Operations Manager at The Sarut Group</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="education">
+                <ul>
+                    <li><span>AWS Certified Practitioner, September 2023</span><br>Per Scholas</li>
+                    <li><span>Master of Business Admistration, August 2004</span><br>Metropolitan College of New York</li>
+                    <li><span>Bachelor of Business Administration, August 2002</span><br>Metropolitan College of New York</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let tablinks = document.getElementsByClassName("tab-links");
+    let tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        let tabContent = document.getElementById(tabname);
+        for (let tabcontent of tabcontents) {
+            if (tabcontent.id === tabname) {
+                tabcontent.classList.toggle("active-tab");
+            } else {
+                tabcontent.classList.remove("active-tab");
+            }
+        }
+        for (let tablink of tablinks) {
+            if (tablink.textContent.trim() === tabname.charAt(0).toUpperCase() + tabname.slice(1)) {
+                tablink.classList.toggle("active-link");
+            } else {
+                tablink.classList.remove("active-link");
+            }
+        }
+    }
+</script>
+
+</body>
+</html>
