@@ -5,6 +5,15 @@
     box-sizing: border-box;
     
 }
+
+:root{
+    --primary-color: #02274d;
+    --secondary-colorL: aliceblue;
+
+}
+
+
+
 .body{
     background: #02274d;
     color: aliceblue;
@@ -16,6 +25,16 @@
     background-size: cover;
     background-position: center;
 }
+#icon{
+    width: 30px;
+    cursor: pointer;
+}
+
+nav ul{
+    flex: 1;
+    text-align: right;
+}
+
 .container{
     padding: 10px 10%;
 }
@@ -100,6 +119,7 @@ nav ul li a:hover::after{
 
 .about-col-1{
     flex-basis: 35%;
+
 }
 .about-col-1 img{
     width: 80%;
